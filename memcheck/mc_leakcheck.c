@@ -1221,8 +1221,8 @@ static Int cmp_LossRecords(const void* va, const void* vb)
    SizeT total_szB_b = lr_b->szB + lr_b->indirect_szB;
 
    // First compare by sizes.
-   if (total_szB_a < total_szB_b) return -1;
-   if (total_szB_a > total_szB_b) return  1;
+   if (total_szB_a < total_szB_b) return  1;
+   if (total_szB_a > total_szB_b) return -1;
    // If size are equal, compare by states.
    if (lr_a->key.state < lr_b->key.state) return -1;
    if (lr_a->key.state > lr_b->key.state) return  1;
