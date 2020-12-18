@@ -6115,7 +6115,7 @@ static Bool mc_process_cmd_line_options(const HChar* arg)
          return False;
       }
       tl_assert(offs1 > offs2);
-      if (offs1 - offs2 > 4096 /*arbitrary*/) {
+      if (offs1 - offs2 > 1024*1024 /*arbitrary*/) {
          VG_(message)(Vg_DebugMsg,
                       "ERROR: --ignore-range-below-sp: suspiciously large "
                       "range: %u-%u (size %u)\n", offs1, offs2, offs1 - offs2);
